@@ -6,13 +6,15 @@ export const environment = {
   production: false
 };
 export const firebaseConfig = {
-  apiKey: 'AIzaSyA9FCJbxjF26tdrmMdg_akc1teaNKnpecM',
-  authDomain: 'db-cronex.firebaseapp.com',
-  databaseURL: 'https://db-cronex.firebaseio.com',
-  projectId: 'db-cronex',
-  storageBucket: 'db-cronex.appspot.com',
-  messagingSenderId: '321983061942',
-  appId: '1:321983061942:web:2c42638d97f4a77b'
+
+  apiKey: 'AIzaSyCOy5klEymlZZdSWEhyPIbT5KWeZBR_5NA',
+  authDomain: 'abcgroup-7362b.firebaseapp.com',
+  databaseURL: 'https://abcgroup-7362b.firebaseio.com',
+  projectId: 'abcgroup-7362b',
+  storageBucket: '',
+  messagingSenderId: '226223847946',
+  appId: '1:226223847946:web:43558dbeaaf98250'
+
 };
 /*
  * For easier debugging in development mode, you can import the following file

@@ -12,20 +12,17 @@ import { Router } from '@angular/router';
 export class AuthGuard implements CanActivate {
 
   constructor( private AFauth: AngularFireAuth ,
-               private router: Router,
-               private storage: Storage) {}
+               private router: Router) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
       return this.AFauth.authState.pipe(map( auth => {
-        // 
-        //console.log(auth.uid);
         if (isNullOrUndefined(auth)) {
+          console.log(auth);
           this.router.navigate(['/signin']);
           return false;
         } else {
-          this.storage.set('idusu', auth.uid);
           return true;
         }
       }));
