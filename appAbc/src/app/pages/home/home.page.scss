@@ -1,14 +1,42 @@
-.welcome-card ion-img {
-  max-height: 35vh;
-  overflow: hidden;
+.home-img{
+max-width: 70px;
+max-height: 44px;
 }
 ion-content .buttondestacado{
-  width: 200px;
+  width: 300px;
   height: 100px;
   --border-radius: 60px;
 }
 ion-content ion-button{
-  width: 100px;
-  height: 100px;
-  --border-radius: 60px;
+  width: 130px;
+  height: 130px;
+  --border-radius: 90px;
 }
+
+.button1{
+  --background: #c69900
+}
+.button2{
+  --background: #00659b
+}
+.button3{
+  --background: #016ecb
+}
+.button4{
+  --background: #a86b7b
+}
+.button5{
+  --background: #66679f
+}
+.button6{
+  --background: #019bcf
+}
+.button7{
+  --background: #429a9b
+}
+// .button8{
+//   background-color: #c69900
+// }
+// .button9{
+//   background-color: #c69900
+// }

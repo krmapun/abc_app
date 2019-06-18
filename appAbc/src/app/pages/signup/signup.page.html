@@ -4,7 +4,7 @@
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
 
-    <ion-title>Registrarse</ion-title>
+    <ion-title>Check In</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,15 +12,11 @@
   <div class="container">
     <img
       class="img-signup"
-      src="../../assets/images/logo_chronex.png"
+      src="../../assets/img/color_logo1.png"
     >
 
     <section class="register">
       <div class="content">
-        <h2>
-          Regístrese con su Dirección de Correo Electrónico
-        </h2>
-
         <form #signUpForm="ngForm">
           <ion-item>
             <ion-input
@@ -47,7 +43,9 @@
           </ion-item>
 
           <ion-button
-            ion-button="ion-button"
+            class="signup-button"
+            expand="full"
+            fill="outline"
             [disabled]="!signUpForm.form.valid"
             block="block"
             color="secondary"
