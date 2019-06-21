@@ -15,7 +15,7 @@ ion-content ion-button{
   --border-radius: 90px;
   font-weight: bold;
 }
-@media screen and (max-width: 569px) {
+@media screen and (min-width: 569px) {
   ion-content ion-button {
     width: 110px;
     height: 110px;

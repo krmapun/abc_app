@@ -30,25 +30,25 @@ export class HomePage {
   }
 
   openBlankBt1(){
-    this.iab.create('https://abcaeronautico.com/directorio', '_blank');
+    this.iab.create('https://abcaeronautico.com/directorio', '_system');
   }
   openBlankBt2(){
-    this.iab.create('https://abcaeronautico.com/noticias.html', '_blank');
+    this.iab.create('https://abcaeronautico.com/noticias.html', '_system');
   }
   openBlankBt3(){
-    this.iab.create('https://abcaeronautico.com/eventos1.html', '_blank');
+    this.iab.create('https://abcaeronautico.com/eventos1.html', '_system');
   }
   openBlankBt4(){
-    this.iab.create('https://abcaeronautico.com/boletin1.html', '_blank');
+    this.iab.create('https://abcaeronautico.com/boletin1.html', '_system');
   }
   openBlankBt5(){
-    this.iab.create('https://abcaeronautico.com/air-channel.html', '_blank');
+    this.iab.create('https://abcaeronautico.com/air-channel.html', '_system');
   }
   openBlankBt6(){
-    this.iab.create('https://abcaeronautico.com/galeria/', '_blank');
+    this.iab.create('https://abcaeronautico.com/galeria/', '_system');
   }
   openBlankBt7(){
-    this.iab.create('https://abcaeronautico.com/fichas-t%C3%A9cnicas.html', '_blank');
+    this.iab.create('https://abcaeronautico.com/fichas-t%C3%A9cnicas.html', '_system');
   }
 
 
