@@ -18,17 +18,22 @@ export class AppComponent {
     {
       title: 'Social Networks',
       url: '',
-      icon: 'list'
+      icon: 'md-person-add'
     },
     {
       title: 'About',
       url: '',
-      icon: 'list'
+      icon: 'md-alert'
     },
     {
       title: 'Check',
       url: '',
-      icon: 'list'
+      icon: 'md-checkmark-circle-outline'
+    },
+    {
+      title: 'Share',
+      url: '',
+      icon: 'md-share'
     }
   ];
 

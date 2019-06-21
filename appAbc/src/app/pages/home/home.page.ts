@@ -29,12 +29,27 @@ export class HomePage {
     this.menu.enable(true);
   }
 
-  openBlank(){
-    this.iab.create('https://abcaeronautico.com/index.html', '_blank');
+  openBlankBt1(){
+    this.iab.create('https://abcaeronautico.com/directorio', '_blank');
+  }
+  openBlankBt2(){
+    this.iab.create('https://abcaeronautico.com/noticias.html', '_blank');
+  }
+  openBlankBt3(){
+    this.iab.create('https://abcaeronautico.com/eventos1.html', '_blank');
+  }
+  openBlankBt4(){
+    this.iab.create('https://abcaeronautico.com/boletin1.html', '_blank');
+  }
+  openBlankBt5(){
+    this.iab.create('https://abcaeronautico.com/air-channel.html', '_blank');
+  }
+  openBlankBt6(){
+    this.iab.create('https://abcaeronautico.com/galeria/', '_blank');
+  }
+  openBlankBt7(){
+    this.iab.create('https://abcaeronautico.com/fichas-t%C3%A9cnicas.html', '_blank');
   }
 
-  openSystem(){
-    this.iab.create('https://abcaeronautico.com/index.html', '_system');
-  }
 
 }
