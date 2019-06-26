@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { MenuController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-home',

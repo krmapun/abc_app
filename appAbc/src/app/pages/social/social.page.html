@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <img class="home-img" src="../../assets/img/color_logo1.png" />
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button icon-only (click)="signOut()"> 
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Siguenos en :</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-icon class="logo-social" name="logo-facebook" (click)="openBlankBt2()"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-icon class="logo-social" name="logo-linkedin"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-icon class="logo-social" name="logo-twitter"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-icon class="logo-social" name="logo-instagram"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
