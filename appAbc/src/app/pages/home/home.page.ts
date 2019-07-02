@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { MenuController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,9 @@ export class HomePage {
 
   public userdata: {};
 
-  constructor (public authservice: AuthService,
+  constructor (
+               private socialSharing: SocialSharing,
+               public authservice: AuthService,
                private menu: MenuController,
                public AFauth: AngularFireAuth,
                private iab: InAppBrowser )
@@ -51,5 +54,15 @@ export class HomePage {
     this.iab.create('https://abcaeronautico.com/fichas-t%C3%A9cnicas.html', '_system');
   }
 
+  share(){
+    this.socialSharing.share('Has parte de ABC Aeronautico', null, null, 'https://abcaeronautico.com/')
+    .then(()=>{
+
+      }
+    ).catch(()=>{
+
+      }
+    );
+  }
 
 }

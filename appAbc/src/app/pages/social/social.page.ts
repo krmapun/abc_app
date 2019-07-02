@@ -18,8 +18,20 @@ export class SocialPage implements OnInit {
   signOut(){
     this.authservice.logout();
   }
-  openBlankBt1(){
-    this.iab.create('https://abcaeronautico.com/directorio', '_system');
+  openfb(){
+    this.iab.create('https://www.facebook.com/abcaeronautico', '_system');
+  }
+  openins(){
+    this.iab.create('https://www.instagram.com/abcaeronautico', '_system');
+  }
+  openyou(){
+    this.iab.create('https://www.youtube.com/channel/UC6XvSL4w0Cpmd2T9nD_7_pA', '_system');
+  }
+  openlink(){
+    this.iab.create('https://www.linkedin.com/in/abc-aeron%C3%A1utico?originalSubdomain=co', '_system');
+  }
+  opentw(){
+    this.iab.create('https://twitter.com/abcaeronautico', '_system');
   }
 
 }
