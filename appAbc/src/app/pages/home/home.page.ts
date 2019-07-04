@@ -33,25 +33,29 @@ export class HomePage {
   }
 
   openBlankBt1(){
+    
     this.iab.create('https://abcaeronautico.com/directorio', '_system');
   }
   openBlankBt2(){
-    this.iab.create('https://abcaeronautico.com/noticias.html', '_system');
+    this.iab.create('https://abcaeronautico.com/fichas-t%C3%A9cnicas.html', '_system');
   }
   openBlankBt3(){
-    this.iab.create('https://abcaeronautico.com/eventos1.html', '_system');
-  }
-  openBlankBt4(){
-    this.iab.create('https://abcaeronautico.com/boletin1.html', '_system');
-  }
-  openBlankBt5(){
-    this.iab.create('https://abcaeronautico.com/air-channel.html', '_system');
-  }
-  openBlankBt6(){
     this.iab.create('https://abcaeronautico.com/galeria/', '_system');
   }
+  openBlankBt4(){
+    this.iab.create('https://abcaeronautico.com/air-channel.html', '_system');
+  }
+  openBlankBt5(){
+    this.iab.create('https://abcaeronautico.com/eventos1.html', '_system');
+  }
+  openBlankBt6(){
+    this.iab.create('https://abcaeronautico.com/noticias.html', '_system');
+  }
   openBlankBt7(){
-    this.iab.create('https://abcaeronautico.com/fichas-t%C3%A9cnicas.html', '_system');
+    this.iab.create('https://abcaeronautico.com/boletin1.html', '_system');
+  }
+  openBlankpauta(){
+    this.iab.create('http://www.fiac.aero/', '_system');
   }
 
   share(){
