@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: 'signin', loadChildren: './pages/signin/signin.module#SigninPageModule' },
   { path: 'signup', loadChildren: './pages/signup/signup.module#SignupPageModule' },
   { path: 'reset-pass', loadChildren: './pages/reset-pass/reset-pass.module#ResetPassPageModule' },
-  { path: 'social', loadChildren: './pages/social/social.module#SocialPageModule' }
+  { path: 'social', loadChildren: './pages/social/social.module#SocialPageModule' },
+  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' }
 ];
 
 @NgModule({

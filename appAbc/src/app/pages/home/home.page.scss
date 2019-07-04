@@ -3,11 +3,14 @@ max-width: 70px;
 max-height: 44px;
 }
 ion-content .buttondestacado{
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
   width: -webkit-fill-available;
-  font-size: 35px;
-  height: 170px;
+  // font-size: 35px;
+  // height: 170px;
   margin: 5px 0 5px 0;
-  --border-radius: 30px;
+  border-radius: 25px;
   font-weight: bold;
 }
 ion-col{
@@ -26,25 +29,66 @@ ion-content ion-button{
   --background: #c69900
 }
 .button2{
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+  margin: 5px;
+  width: -webkit-fill-available;
+  border-radius: 25px;
   --background: #00659b
 }
 .button3{
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+  margin: 5px;
+  width: -webkit-fill-available;
+  border-radius: 25px;
   --background: #016ecb
 }
 .button4{
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+  margin: 5px;
+  width: -webkit-fill-available;
+  border-radius: 25px;
   --background: #a86b7b
 }
 .button5{
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+  margin: 5px;
+  width: -webkit-fill-available;
+  border-radius: 25px;
   --background: #66679f
 }
 .button6{
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+  margin: 5px;
+  width: -webkit-fill-available;
+  border-radius: 25px;
   --background: #019bcf
 }
 .button7{
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+  margin: 5px;
+  width: -webkit-fill-available;
+  border-radius: 25px;
   --background: #429a9b
 }
 .button8{
   --background: #72bce2
+}
+.pauta{
+  -webkit-box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.5);
+box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.5);
 }
 // .button9{
 //   background-color: #c69900

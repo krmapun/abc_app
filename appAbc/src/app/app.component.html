@@ -16,6 +16,22 @@
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+              <ion-item [routerDirection]="'root'" [routerLink]="" color="secondary" >
+                <ion-icon slot="start" name="md-share"></ion-icon>
+                <ion-label >
+                    Share
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+              <ion-item [routerDirection]="'root'" [routerLink]="" color="secondary" (click)="signOut()">
+                <ion-icon slot="start" name="log-out"></ion-icon>
+                <ion-label >
+                    Logout
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
         </ion-list>
       </ion-content>
     </ion-menu>

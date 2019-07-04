@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { MenuController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
+import { LoadingController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -16,7 +18,9 @@ export class SignupPage implements OnInit {
   constructor(
     public authservice: AuthService,
     public alertController: AlertController,
-    private menu: MenuController) {}
+    private menu: MenuController,
+    public router: Router,
+    public loadingController: LoadingController) {}
 
   ngOnInit() {
   }
@@ -32,11 +36,17 @@ export class SignupPage implements OnInit {
     await alert.present();
   }
 
-  onSubmitRegister() {
+  async onSubmitRegister() {
+    let loading = await this.loadingController.create({
+      message: 'Guardando...'
+    });
+    await loading.present();
     this.authservice.register(this.email, this.password).then(auth => {
+      loading.dismiss();
       this.presentAlert('¡Éxito!','','Usuario registrado exitosamente');
       console.log(auth);
-    }).catch(err => console.log(err));
+      this.router.navigate(['/signin']);
+    }).catch(err => {loading.dismiss(); console.log(err);});
   }
 
   ionViewWillEnter() {

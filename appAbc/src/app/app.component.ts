@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AuthService } from './services/auth.service';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-root',
@@ -22,19 +24,16 @@ export class AppComponent {
     },
     {
       title: 'About',
-      url: '',
+      url: '/about',
       icon: 'md-alert'
-    },
-    {
-      title: 'Share',
-      url: '',
-      icon: 'md-share'
     }
   ];
 
   constructor(
+    public authservice: AuthService,
     private platform: Platform,
     private splashScreen: SplashScreen,
+    private socialSharing: SocialSharing,
     private statusBar: StatusBar
   ) {
     this.initializeApp();
@@ -45,5 +44,18 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+  signOut(){
+    this.authservice.logout();
+  }
+  share(){
+    this.socialSharing.share('Has parte de ABC Aeronautico', null, null, 'https://abcaeronautico.com/')
+    .then(()=>{
+
+      }
+    ).catch(()=>{
+
+      }
+    );
   }
 }

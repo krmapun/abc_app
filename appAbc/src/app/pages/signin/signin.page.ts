@@ -23,16 +23,6 @@ export class SigninPage implements OnInit {
   ngOnInit() {
   }
 
-  async presentLoading() {
-    const loading = await this.loadingController.create({
-      message: 'Bienvenido...',
-      duration: 1000
-    });
-    await loading.present();
-
-    const { role, data } = await loading.onDidDismiss();
-  }
-
   async presentAlert(titulo, subtitulo, contenido) {
     const alert = await this.alertController.create({
       header: titulo,
@@ -43,11 +33,15 @@ export class SigninPage implements OnInit {
 
     await alert.present();
   }
-  onSubmitLogin(){
-    this.presentLoading();
+  async onSubmitLogin(){
+    let loading = await this.loadingController.create({
+      message: 'Bienvenido...'
+    });
+    await loading.present();
     this.authService.login(this.email, this.password).then( res => {
+      loading.dismiss();
       this.router.navigate(['/home']);
-    }).catch(err => this.presentAlert('¡Advertencia!','','El Usuario ó la contraseña no coinciden'))
+    }).catch(err => {loading.dismiss(); this.presentAlert('¡Advertencia!','','El Usuario ó la contraseña no coinciden');})
   }
 
   ionViewWillEnter() {
