@@ -20,10 +20,43 @@
         <form #signUpForm="ngForm">
           <ion-item>
             <ion-input
+              type="text"
+              [(ngModel)]="motte"
+              autocorrect="none"
+              placeholder="Nombres"
+              autocapitalize="on"
+              name="motte"
+              required="required"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input
+              type="text"
+              [(ngModel)]="contacto"
+              autocorrect="off"
+              placeholder="Telefono"
+              autocapitalize="none"
+              name="Telefono"
+              required="required"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input
+              type="text"
+              [(ngModel)]="ciudad"
+              autocorrect="off"
+              placeholder="Ciudad"
+              autocapitalize="none"
+              name="ciudad"
+              required="required"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input
               type="email"
               [(ngModel)]="email"
               autocorrect="off"
-              placeholder="correo"
+              placeholder="Correo"
               autocapitalize="none"
               name="email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
@@ -36,7 +69,7 @@
               type="password"
               name="password"
               [(ngModel)]="password"
-              placeholder="contraseña"
+              placeholder="Contraseña"
               required="required"
               minlength="6"
             ></ion-input>

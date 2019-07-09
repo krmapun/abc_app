@@ -59,7 +59,8 @@ export class HomePage {
   }
 
   share(){
-    this.socialSharing.share('Has parte de ABC Aeronautico', null, null, 'https://abcaeronautico.com/')
+// tslint:disable-next-line: max-line-length
+    this.socialSharing.share('Has parte de ABC Aeronautico', null, null, 'https://play.google.com/store/apps/details?id=com.krmapun.appAbc&hl=es')
     .then(()=>{
 
       }

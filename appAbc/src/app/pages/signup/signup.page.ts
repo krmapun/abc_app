@@ -12,6 +12,9 @@ import { Router } from '@angular/router';
 })
 export class SignupPage implements OnInit {
 
+  public motte: string;
+  public contacto: string;
+  public ciudad: string;
   public email: string;
   public password: string;
 
