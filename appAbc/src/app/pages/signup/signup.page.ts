@@ -4,6 +4,8 @@ import { MenuController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { RegistroService } from '../../services/registro.service';
+import { TaskI } from '../../models/task.interface';
 
 @Component({
   selector: 'app-signup',
@@ -12,18 +14,23 @@ import { Router } from '@angular/router';
 })
 export class SignupPage implements OnInit {
 
-  public motte: string;
-  public contacto: string;
-  public ciudad: string;
-  public email: string;
+
+  todo: TaskI = {
+    motte: null,
+    contacto: null,
+    ciudad: null,
+    email: null,
+  };
   public password: string;
+  todoId = null;
 
   constructor(
     public authservice: AuthService,
     public alertController: AlertController,
     private menu: MenuController,
     public router: Router,
-    public loadingController: LoadingController) {}
+    public loadingController: LoadingController,
+    private todoservice: RegistroService,) {}
 
   ngOnInit() {
   }
@@ -40,11 +47,16 @@ export class SignupPage implements OnInit {
   }
 
   async onSubmitRegister() {
-    let loading = await this.loadingController.create({
+    const loading = await this.loadingController.create({
       message: 'Guardando...'
     });
+    console.log(this.todo);
     await loading.present();
-    this.authservice.register(this.email, this.password).then(auth => {
+    
+    this.authservice.register(this.todo.email, this.password).then(auth => {
+
+      
+      this.todoservice.addTodo(this.todo).then(() => {}).catch(err => {console.log(err);});
       loading.dismiss();
       this.presentAlert('¡Éxito!','','Usuario registrado exitosamente');
       console.log(auth);

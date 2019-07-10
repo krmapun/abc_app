@@ -16,6 +16,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -24,7 +26,8 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [
     StatusBar,
