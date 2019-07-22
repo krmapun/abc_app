@@ -38,9 +38,10 @@ h2 {
 
 ion-item{
     margin: auto;
-    width: 270px;
     --background: transparent;
     --color: #ffffff;
 }
 
-
+.transparent{
+    color: transparent;
+}

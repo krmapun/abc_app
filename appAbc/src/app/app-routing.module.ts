@@ -21,7 +21,9 @@ const routes: Routes = [
   { path: 'signup', loadChildren: './pages/signup/signup.module#SignupPageModule' },
   { path: 'reset-pass', loadChildren: './pages/reset-pass/reset-pass.module#ResetPassPageModule' },
   { path: 'social', loadChildren: './pages/social/social.module#SocialPageModule' },
-  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' }
+  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' },
+  { path: 'detalle/:id', loadChildren: './pages/notidetalle/notidetalle.module#NotidetallePageModule' },
+  { path: 'detalle', loadChildren: './pages/notidetalle/notidetalle.module#NotidetallePageModule' }
 ];
 
 @NgModule({

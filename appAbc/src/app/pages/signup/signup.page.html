@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="secondary">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
@@ -6,7 +6,7 @@
 
     <ion-title>Check In</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
   <div class="container">
@@ -17,75 +17,117 @@
 
     <section class="register">
       <div class="content">
-        <form #signUpForm="ngForm">
-          <ion-item>
-            <ion-input
-              type="text"
-              [(ngModel)]="todo.motte"
-              autocorrect="none"
-              placeholder="Nombres"
-              autocapitalize="on"
-              name="motte"
-              required="required"
-            ></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input
-              type="text"
-              [(ngModel)]="todo.contacto"
-              autocorrect="off"
-              placeholder="Telefono"
-              autocapitalize="none"
-              name="Telefono"
-              required="required"
-            ></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input
-              type="text"
-              [(ngModel)]="todo.ciudad"
-              autocorrect="off"
-              placeholder="Ciudad"
-              autocapitalize="none"
-              name="ciudad"
-              required="required"
-            ></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input
-              type="email"
-              [(ngModel)]="todo.email"
-              autocorrect="off"
-              placeholder="Correo"
-              autocapitalize="none"
-              name="email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-              required="required"
-            ></ion-input>
-          </ion-item>
+        <ion-grid>
+          <form #signUpForm="ngForm">
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label color="light" position="floating">Nombre</ion-label>
 
-          <ion-item>
-            <ion-input
-              type="password"
-              name="password"
-              [(ngModel)]="password"
-              placeholder="Contraseña"
-              required="required"
-              minlength="6"
-            ></ion-input>
-          </ion-item>
+                  <ion-input
+                    type="text"
+                    [(ngModel)]="todo.motte"
+                    autocorrect="none"
+                    autocapitalize="on"
+                    name="motte"
+                    required="required"
+                  ></ion-input>
+                </ion-item>
+              </ion-col>
 
-          <ion-button
-            class="signup-button"
-            expand="full"
-            fill="outline"
-            [disabled]="!signUpForm.form.valid"
-            block="block"
-            color="secondary"
-            round="round"
-            (click)="onSubmitRegister()"
-          >Registrarse</ion-button>
-        </form>
+              <ion-col>
+                <ion-item>
+                  <ion-label color="light" position="floating">Apellido</ion-label>
+
+                  <ion-input
+                    type="text"
+                    [(ngModel)]="todo.apellido"
+                    autocorrect="none"
+                    autocapitalize="on"
+                    name="apellido"
+                    required="required"
+                  ></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="8">
+                <ion-item>
+                  <ion-label color="light" position="floating">Ciudad</ion-label>
+                  <ion-select name="selectedCountry" [(ngModel)]="todo.country"  okText="Okay" cancelText="Dismiss">
+                      <ion-select-option *ngFor="let country of countries" [value]="country">{{country.name}}</ion-select-option>
+                  </ion-select>
+                  <!-- 
+                  <ion-input
+                    type="text"
+                    [(ngModel)]="todo.ciudad"
+                    autocorrect="off"
+                    autocapitalize="none"
+                    name="ciudad"
+                    required="required"
+                  ></ion-input> -->
+                </ion-item>
+              </ion-col>
+              <ion-col size="4">
+                <ion-item>
+                  <ion-label class="transparent" position="floating">Cod.</ion-label>
+                  <ion-input
+                    type="text"
+                    disabled
+                  >{{todo.country.dial_code}}</ion-input>
+                  
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label color="light" position="floating">Telefono</ion-label>
+
+                  <ion-input
+                    type="text"
+                    [(ngModel)]="todo.contacto"
+                    autocorrect="off"
+                    autocapitalize="none"
+                    name="Telefono"
+                    required="required"
+                  ></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label color="light" position="floating">Correo</ion-label>
+
+                  <ion-input
+                    type="email"
+                    [(ngModel)]="todo.email"
+                    autocorrect="off"
+                    autocapitalize="none"
+                    name="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                    required="required"
+                  ></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+
+            <ion-button
+              class="signup-button"
+              expand="full"
+              fill="outline"
+              [disabled]="!signUpForm.form.valid"
+              block="block"
+              color="secondary"
+              round="round"
+              (click)="onSubmitRegister()"
+            >Registrarse</ion-button>
+          </form>
+        </ion-grid>
       </div>
     </section>
   </div>

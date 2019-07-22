@@ -17,14 +17,11 @@ export class AuthGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-      return this.AFauth.authState.pipe(map( auth => {
-        if (isNullOrUndefined(auth)) {
-          console.log(auth);
-          this.router.navigate(['/signin']);
-          return false;
-        } else {
-          return true;
-        }
-      }));
+      if(window.sessionStorage.getItem('dataUser')){
+        return true;
+      } else{
+        this.router.navigate(['/signup']);
+        return false;
+      }
     }
 }

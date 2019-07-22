@@ -1,3 +1,5 @@
+import { MbscModule } from '@mobiscroll/angular';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -22,7 +24,9 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [
+  imports: [ 
+    MbscModule,  
+    FormsModule,  
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,

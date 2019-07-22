@@ -26,7 +26,13 @@ ion-content ion-button{
 }
 
 h5 {
-  margin: 0;
+  background-color: blue;
+  color: #ffffff; 
+  margin: 0px -10px;
+}
+
+.transparente{
+  color: transparent !important;
 }
 
 .button1{

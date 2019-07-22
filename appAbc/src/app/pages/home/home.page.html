@@ -3,84 +3,170 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+
     <ion-title class="ion-text-center">
-      <img class="home-img" src="../../assets/img/color_logo1.png" />
+      <img
+        class="home-img"
+        src="../../assets/img/color_logo1.png"
+      >
     </ion-title>
+
     <ion-buttons slot="end">
-      <ion-button icon-only>
-        <ion-icon></ion-icon>
+      <ion-button icon-only="icon-only">
+          <ion-icon name="add" class="transparente"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-grid>
     <ion-row>
       <ion-col class="ion-text-center">
-          <img class="buttondestacado button1" src="assets/img/directorio.gif" (click)="openBlankBt1()">
- 
+        <img
+          class="buttondestacado button1"
+          src="assets/img/directorio.gif"
+          (click)="openBlankBt1()"
+        >
+
         <!-- <ion-button class="buttondestacado button1" (click)="openBlankBt1()">
             Directorio
         </ion-button> -->
       </ion-col>
     </ion-row>
+
     <ion-row>
       <ion-col class="ion-text-center">
-        <h5>OTRAS SECCIONES</h5>
+        <h5>NOVEDADES DEL SECTOR</h5>
       </ion-col>
     </ion-row>
+
     <ion-row>
       <ion-col class="ion-text-center">
-        <img class="button2" src="assets/img/btn2.jpg" (click)="openBlankBt2()">
+        <ion-list>
+          <ion-item-sliding *ngFor="let noti of notis">
+            <ion-item
+              lines="inset"
+              button [routerLink]="['/detalle, noti.id']"
+            >
+              <img
+                src="https://i.blogs.es/2b7c9a/moon-colors/450_1000.jpg"
+                width="30%"
+              >
+              <ion-label>
+                <h2> {{noti.titulo}} </h2>
+
+                <p> {{noti.cuerpo}} </p>
+              </ion-label>
+            </ion-item>
+          </ion-item-sliding>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <h5>PORTAL AERONÁUTICO</h5>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <img
+          class="button2"
+          src="assets/img/btn2.jpg"
+          (click)="openBlankBt2()"
+        >
+
         <!-- <ion-button class="button2" (click)="openBlankBt2()"> 
             Noticias
         </ion-button> -->
       </ion-col>
+
       <ion-col class="ion-text-center">
-        <img class="button3" src="assets/img/btn3.jpg" (click)="openBlankBt3()">
+        <img
+          class="button3"
+          src="assets/img/btn3.jpg"
+          (click)="openBlankBt3()"
+        >
+
         <!-- <ion-button class="button3" (click)="openBlankBt3()"> 
           Eventos
         </ion-button> -->
       </ion-col>
+
       <ion-col class="ion-text-center">
-        <img class="button4" src="assets/img/btn4.jpg" (click)="openBlankBt4()">
+        <img
+          class="button4"
+          src="assets/img/btn4.jpg"
+          (click)="openBlankBt4()"
+        >
+
         <!-- <ion-button class="button4" (click)="openBlankBt4()">
           Boletín
         </ion-button> -->
       </ion-col>
     </ion-row>
+
     <ion-row>
       <ion-col class="ion-text-center">
-        <img class="button5" src="assets/img/btn5.jpg" (click)="openBlankBt5()">
+        <img
+          class="button5"
+          src="assets/img/btn5.jpg"
+          (click)="openBlankBt5()"
+        >
+
         <!-- <ion-button class="button5" (click)="openBlankBt5()">
           Audio <br> & <br> Video
         </ion-button> -->
       </ion-col>
+
       <ion-col class="ion-text-center">
-        <img class="button6" src="assets/img/btn6.jpg" (click)="openBlankBt6()">
+        <img
+          class="button6"
+          src="assets/img/btn6.jpg"
+          (click)="openBlankBt6()"
+        >
+
         <!-- <ion-button class="button6" (click)="openBlankBt6()">
           Galería
         </ion-button> -->
       </ion-col>
+
       <ion-col class="ion-text-center">
-        <img class="button7" src="assets/img/btn7.jpg" (click)="openBlankBt7()">
+        <img
+          class="button7"
+          src="assets/img/btn7.jpg"
+          (click)="openBlankBt7()"
+        >
+
         <!-- <ion-button class="button7" (click)="openBlankBt7()">
           Fichas <br> técnicas
         </ion-button> -->
       </ion-col>
     </ion-row>
+
     <ion-row>
       <ion-col class="ion-text-center">
-        <img class="buttondestacado button8" src="assets/img/boton-compartir.jpg" (click)="share()">
+        <img
+          class="buttondestacado button8"
+          src="assets/img/boton-compartir.jpg"
+          (click)="share()"
+        >
+
         <!-- <ion-button class="buttondestacado button8" (click)="share()"></ion-button>
           Compartir
         </ion-button> -->
       </ion-col>
     </ion-row>
+
     <ion-row>
       <ion-col class="ion-text-center">
-        <img class="pauta" src="assets/img/pauta.gif" (click)="openBlankpauta()">
+        <img
+          class="pauta"
+          src="assets/img/pauta.gif"
+          (click)="openBlankpauta()"
+        >
       </ion-col>
     </ion-row>
   </ion-grid>

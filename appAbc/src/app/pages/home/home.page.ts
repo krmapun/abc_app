@@ -1,28 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { MenuController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { NotiI } from '../../models/noti.interface';
+import { NotiService } from '../../services/noti.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit{
 
   public userdata: {};
-
+  notis: NotiI[];
   constructor (
                private socialSharing: SocialSharing,
                public authservice: AuthService,
                private menu: MenuController,
                public AFauth: AngularFireAuth,
-               private iab: InAppBrowser )
+               private iab: InAppBrowser,
+               private notiservice: NotiService)
   {
     this.AFauth.authState.subscribe(user => {
       this.userdata = user;
+    });
+  }
+
+  ngOnInit(){
+    this.notiservice.getNotis().subscribe( res => {
+      console.log(res);
+      this.notis = res;
     });
   }
   signOut(){
