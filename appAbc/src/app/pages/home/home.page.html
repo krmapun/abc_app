@@ -46,18 +46,15 @@
         <ion-list>
           <ion-item-sliding *ngFor="let noti of notis">
             <ion-item
-              lines="inset"
-              button [routerLink]="['/detalle, noti.id']"
+              lines="none"
+              text-wrap
+              button [routerLink]="['/detalle', noti.id]"
             >
               <img
-                src="https://i.blogs.es/2b7c9a/moon-colors/450_1000.jpg"
+                src={{noti.img}}
                 width="30%"
               >
-              <ion-label>
-                <h2> {{noti.titulo}} </h2>
-
-                <p> {{noti.cuerpo}} </p>
-              </ion-label>
+              <h3> {{noti.titulo}} </h3>
             </ion-item>
           </ion-item-sliding>
         </ion-list>
@@ -106,9 +103,7 @@
           Boletín
         </ion-button> -->
       </ion-col>
-    </ion-row>
-
-    <ion-row>
+   
       <ion-col class="ion-text-center">
         <img
           class="button5"
@@ -149,7 +144,7 @@
     <ion-row>
       <ion-col class="ion-text-center">
         <img
-          class="buttondestacado button8"
+          class="buttondestacado2 button8"
           src="assets/img/boton-compartir.jpg"
           (click)="share()"
         >

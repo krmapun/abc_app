@@ -16,6 +16,7 @@ export class NotidetallePage implements OnInit {
   noti: NotiI = {
     titulo: '',
     cuerpo: '',
+    date: '',
   };
   notiId = null;
   

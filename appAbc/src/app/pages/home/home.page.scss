@@ -7,6 +7,18 @@ ion-content .buttondestacado{
 -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
 box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
   width: -webkit-fill-available;
+  height: 155px;
+  // font-size: 35px;
+  // height: 170px;
+  margin: 5px 0 5px 0;
+  border-radius: 25px;
+  font-weight: bold;
+}
+ion-content .buttondestacado2{
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+  width: -webkit-fill-available;
   // font-size: 35px;
   // height: 170px;
   margin: 5px 0 5px 0;
@@ -26,13 +38,19 @@ ion-content ion-button{
 }
 
 h5 {
-  background-color: blue;
-  color: #ffffff; 
+  background-color: #0066ff;
+  color: #ffffff;
   margin: 0px -10px;
+  padding: 5px 0;
 }
 
 .transparente{
   color: transparent !important;
+}
+h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 5px 5px;
 }
 
 .button1{
@@ -44,7 +62,7 @@ h5 {
 box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
   margin: 5px;
   width: -webkit-fill-available;
-  border-radius: 25px;
+  border-radius: 10px;
   --background: #00659b
 }
 .button3{
@@ -53,7 +71,7 @@ box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
 box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
   margin: 5px;
   width: -webkit-fill-available;
-  border-radius: 25px;
+  border-radius: 10px;
   --background: #016ecb
 }
 .button4{
@@ -62,7 +80,7 @@ box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
 box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
   margin: 5px;
   width: -webkit-fill-available;
-  border-radius: 25px;
+  border-radius: 10px;
   --background: #a86b7b
 }
 .button5{
@@ -71,7 +89,7 @@ box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
 box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
   margin: 5px;
   width: -webkit-fill-available;
-  border-radius: 25px;
+  border-radius: 10px;
   --background: #66679f
 }
 .button6{
@@ -80,7 +98,7 @@ box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
 box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
   margin: 5px;
   width: -webkit-fill-available;
-  border-radius: 25px;
+  border-radius: 10px;
   --background: #019bcf
 }
 .button7{
@@ -89,7 +107,7 @@ box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
 box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
   margin: 5px;
   width: -webkit-fill-available;
-  border-radius: 25px;
+  border-radius: 10px;
   --background: #429a9b
 }
 .button8{
@@ -99,6 +117,19 @@ box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
   -webkit-box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.5);
 -moz-box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.5);
 box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.5);
+}
+
+ion-item {
+  --inner-padding-bottom: 0;
+  --inner-padding-end :0;
+  --inner-padding-start :0;
+  --inner-padding-top:0;
+  --padding-start: 0
+  /* padding-right: unset; */
+  /* -webkit-padding-start: calc(var(--padding-start) + var(--ion-safe-area-left, 0px)); */
+  /* padding-inline-start: calc(var(--padding-start) + var(--ion-safe-area-left, 0px)); */
+  /* -webkit-padding-end: var(--padding-end); */
+  /* padding-inline-end: var(--padding-end); */
 }
 // .button9{
 //   background-color: #c69900
