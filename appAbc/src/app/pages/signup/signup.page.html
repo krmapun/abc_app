@@ -52,9 +52,9 @@
             </ion-row>
 
             <ion-row>
-              <ion-col size="8">
+              <ion-col>
                 <ion-item>
-                  <ion-label color="light" position="floating">Ciudad</ion-label>
+                  <ion-label color="light" position="floating">País</ion-label>
                   <ion-select name="selectedCountry" [(ngModel)]="todo.country"  okText="Okay" cancelText="Dismiss">
                       <ion-select-option *ngFor="let country of countries" [value]="country">{{country.name}}</ion-select-option>
                   </ion-select>
@@ -69,14 +69,17 @@
                   ></ion-input> -->
                 </ion-item>
               </ion-col>
-              <ion-col size="4">
+              <ion-col>
                 <ion-item>
-                  <ion-label class="transparent" position="floating">Cod.</ion-label>
+                  <ion-label position="floating">Ciudad</ion-label>
                   <ion-input
                     type="text"
-                    disabled
-                  >{{todo.country.dial_code}}</ion-input>
-                  
+                    [(ngModel)]="todo.ciudad"
+                    autocorrect="off"
+                    autocapitalize="none"
+                    name="Ciudad"
+                    required="required"
+                  ></ion-input>
                 </ion-item>
               </ion-col>
             </ion-row>
@@ -91,7 +94,7 @@
                     [(ngModel)]="todo.contacto"
                     autocorrect="off"
                     autocapitalize="none"
-                    name="Telefono"
+                    name="Celular"
                     required="required"
                   ></ion-input>
                 </ion-item>
@@ -100,7 +103,7 @@
 
             <ion-row>
               <ion-col>
-                <ion-item>
+                <!-- <ion-item>
                   <ion-label color="light" position="floating">Correo</ion-label>
 
                   <ion-input
@@ -112,7 +115,7 @@
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                     required="required"
                   ></ion-input>
-                </ion-item>
+                </ion-item> -->
               </ion-col>
             </ion-row>
 

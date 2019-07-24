@@ -3,4 +3,5 @@ export interface NotiI {
     titulo: string;
     cuerpo: string;
     date: string;
+    img: string;
 }

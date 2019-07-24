@@ -18,7 +18,7 @@ export class SignupPage implements OnInit {
     motte: null,
     apellido: null,
     contacto: null,
-    ciudad: 'country',
+    ciudad: null,
     email: null,
     country: null,
   };
