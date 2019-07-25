@@ -6,6 +6,7 @@ import { LoadingController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { RegistroService } from '../../services/registro.service';
 import { TaskI } from '../../models/task.interface';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-signup',
@@ -1004,7 +1005,8 @@ export class SignupPage implements OnInit {
     private menu: MenuController,
     public router: Router,
     public loadingController: LoadingController,
-    private todoservice: RegistroService,) {
+    private todoservice: RegistroService,
+    private storage: Storage) {
 
     }
 
@@ -1023,7 +1025,6 @@ export class SignupPage implements OnInit {
   }
 
   async onSubmitRegister() {
-    console.log(this.todo);
     const loading = await this.loadingController.create({
       message: 'Guardando...'
     });
@@ -1031,7 +1032,8 @@ export class SignupPage implements OnInit {
     await loading.present();
 
     this.todoservice.addTodo(this.todo).then(() => {
-      window.sessionStorage.setItem('dataUser', JSON.stringify(this.todo));
+      this.storage.set('dataUser', JSON.stringify(this.todo));
+      //window.sessionStorage.setItem('dataUser', JSON.stringify(this.todo));
       loading.dismiss();
       this.router.navigate(['/home']);
     }).catch(err => {loading.dismiss();console.log(err);});

@@ -6,6 +6,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { NotiI } from '../../models/noti.interface';
 import { NotiService } from '../../services/noti.service';
+import { isNullOrUndefined } from 'util';
+
 
 @Component({
   selector: 'app-home',
@@ -30,10 +32,14 @@ export class HomePage implements OnInit{
   }
 
   ngOnInit(){
+    console.log(this.notis);
     this.notiservice.getNotis().subscribe( res => {
-      console.log(res);
       this.notis = res;
+      window.localStorage.setItem('notis',JSON.stringify(res));
     });
+    if (isNullOrUndefined(this.notis)){
+      this.notis = JSON.parse(window.localStorage.getItem('notis'));
+    }
   }
   signOut(){
     this.authservice.logout();
