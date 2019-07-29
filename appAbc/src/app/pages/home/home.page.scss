@@ -30,10 +30,12 @@ ion-col{
 }
 ion-content ion-button{
   margin: 1px;
-  font-size: 12px;
-  width: 80px;
-  height: 80px;
-  --border-radius: 50%;
+  font-size: 20px;
+  margin: 10px 10px;
+  width: -webkit-fill-available;
+  height: 40px;
+  color: #000000;
+  --border-radius: 10%; 
   font-weight: bold;
 }
 
@@ -48,13 +50,17 @@ h5 {
   color: transparent !important;
 }
 h3 {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 900;
   margin: 5px 5px;
 }
 
 .button1{
   --background: #c69900
+}
+
+.button11{
+  --background: #ffc606;  
 }
 .button2{
   -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);

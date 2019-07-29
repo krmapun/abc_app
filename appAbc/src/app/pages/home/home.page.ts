@@ -70,8 +70,11 @@ export class HomePage implements OnInit{
   openBlankBt7(){
     this.iab.create('https://abcaeronautico.com/boletin1.html', '_system');
   }
+  openBlankBt11(){
+    this.iab.create('https://abcaeronautico.com/boletin1.html', '_system');
+  }
   openBlankpauta(){
-    this.iab.create('http://www.fiac.aero/', '_system');
+    this.iab.create('https://abcaeronautico.com/index.html', '_system');
   }
 
   share(){

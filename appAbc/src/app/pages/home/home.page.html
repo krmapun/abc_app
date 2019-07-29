@@ -46,13 +46,14 @@
         <ion-list>
           <ion-item-sliding *ngFor="let noti of notis">
             <ion-item
-              lines="none"
+              lines="full"
               text-wrap
               button [routerLink]="['/detalle', noti.id]"
             >
               <img
                 src={{noti.img}}
-                width="30%"
+                width="40%"
+                height="80%"
               >
               <h3> {{noti.titulo}} </h3>
             </ion-item>
@@ -63,7 +64,9 @@
 
     <ion-row>
       <ion-col class="ion-text-center">
-        <h5>PORTAL AERONÁUTICO</h5>
+          <ion-button class="button11" (click)="openBlankBt11()"> 
+              PORTAL AERONÁUTICO
+          </ion-button>
       </ion-col>
     </ion-row>
 
