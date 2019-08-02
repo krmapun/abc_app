@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { map } from 'rxjs/operators';
 import { isNullOrUndefined } from 'util';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage';
@@ -12,8 +10,7 @@ import { Storage } from '@ionic/storage';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor( private AFauth: AngularFireAuth ,
-               private router: Router,
+  constructor( private router: Router,
                private storage: Storage) {}
 
   canActivate(
@@ -28,11 +25,5 @@ export class AuthGuard implements CanActivate {
           return true;
         }
       });
-      // if(window.sessionStorage.getItem('dataUser')){
-      //   return true;
-      // } else{
-      //   this.router.navigate(['/signup']);
-      //   return false;
-      // }
     }
 }

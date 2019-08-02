@@ -4,4 +4,5 @@ export interface NotiI {
     cuerpo: string;
     date: string;
     img: string;
+    url: string;
 }

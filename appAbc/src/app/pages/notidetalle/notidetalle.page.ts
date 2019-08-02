@@ -3,6 +3,7 @@ import { NotiI } from '../../models/noti.interface';
 import { NotiService } from '../../services/noti.service';
 import { ActivatedRoute } from '@angular/router';
 import { NavController, LoadingController } from '@ionic/angular';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-notidetalle',
@@ -17,7 +18,8 @@ export class NotidetallePage implements OnInit {
     titulo: '',
     cuerpo: '',
     date: '',
-    img: ''
+    img: '',
+    url: ''
   };
   notiId = null;
   
@@ -26,6 +28,7 @@ export class NotidetallePage implements OnInit {
     private nav: NavController,
     private notiservice: NotiService,
     private loadingcontroller: LoadingController,
+    private socialSharing: SocialSharing,
   ) { }
 
   ngOnInit() {
@@ -50,5 +53,10 @@ export class NotidetallePage implements OnInit {
     });
   }
 
-
+  shareNoti(){
+    // tslint:disable-next-line: max-line-length
+      this.socialSharing.share(this.noti.titulo, this.noti.date, null, this.noti.url)
+        .then(()=>{}).catch(()=>{}
+      );
+  }
 }
